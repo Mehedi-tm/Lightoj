@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+ll to_decimal(ll n)
+{
+    ll d=0,k=0;
+    while(n>0)
+    {
+        k=k+(n%10)*pow(2,d);
+        d++;
+        n=n/10;
+
+    }
+    return k;
+}
+int main()
+{
+//ios_base::sync_with_stdio(0);
+int t;
+cin>>t;
+ll m=0;
+while(t--)
+{
+    ll a,b,c,d;
+    scanf("%lld.%lld.%lld.%lld",&a,&b,&c,&d);
+    ll e,f,g,h;
+    scanf("%lld.%lld.%lld.%lld",&e,&f,&g,&h);
+    if(a==to_decimal(e)&& b==to_decimal(f) && c==to_decimal(g) && d==to_decimal(h))
+        printf("Case %lld: Yes\n",++m);
+    else
+        printf("Case %lld: No\n",++m);
+}
+}
