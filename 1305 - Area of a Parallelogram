@@ -1,0 +1,46 @@
+
+/*
+If you know the coordinates of A, B, C and you want to find the coordinates of D such that ABCD is a parallelogram then you can use the vector relation
+AB−→−=DC−→− which leads to
+
+xB−xA=xC−xD
+xd=xa+xc-xb
+
+yB−yA=yC−yD
+yd=ya+yc-yb
+
+d=|xa ya|
+  |xb yb|
+  |xc yc|
+  |xd yd|
+  |xa ya|
+ 
+d=((xa*yb)+(xb*yc)+(xc*yd)+(xd*ya))-((ya*xb)+(yb*xc)+(yc*xd)+(yd*xa)) ;
+ 
+area=abs(d/2);
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+int main()
+{
+    ll t,m=0,d;
+    cin>>t;
+    while(t--)
+    {
+        ll xa,ya,xb,yb,xc,yc,xd,yd;
+        cin>>xa>>ya>>xb>>yb>>xc>>yc;
+        xd=xa-xb+xc;
+        yd=ya-yb+yc;
+        d=((xa*yb)+(xb*yc)+(xc*yd)+(xd*ya))-((ya*xb)+(yb*xc)+(yc*xd)+(yd*xa));
+        cout<<"Case "<<++m<<":"<<" "<<xd<<" "<<yd<<" "<<abs(d/2)<<endl;
+
+
+
+    }
+}
+
+
+
+
