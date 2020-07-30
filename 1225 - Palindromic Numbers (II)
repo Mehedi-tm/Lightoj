@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+int main()
+{
+    int t,d=0;
+    cin>>t;
+    while(t--)
+    {
+        ll n,rev=0,m;
+        cin>>n;
+        m=n;
+        while(n>0)
+        {
+            rev*=10;
+            rev+=n%10;
+            n/=10;
+        }
+        if(m==rev)
+            cout<<"Case "<<++d<<":"<<" "<<"Yes"<<endl;
+        else
+            cout<<"Case "<<++d<<":"<<" "<<"No"<<endl;
+    }
+}
